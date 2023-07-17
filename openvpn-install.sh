@@ -1032,6 +1032,8 @@ WantedBy=multi-user.target" >/etc/systemd/system/iptables-openvpn.service
 	fi
 	echo "remote $IP $PORT
 dev tun
+route-nopull
+route 10.0.0.0 255.255.0.0
 resolv-retry infinite
 nobind
 persist-key
